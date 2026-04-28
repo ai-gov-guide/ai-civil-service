@@ -13,7 +13,7 @@ var usersRouter = require('./routes/users');
 var documentsRouter = require('./routes/documentsRouter');
 var questionRouter = require('./routes/questionRouter');
 var authRouter = require('./routes/authRouter');
-
+var termsRouter = require('./routes/termsRouter'); // 행정용어해설
 
 var app = express();
 
@@ -47,7 +47,7 @@ app.use('/users', usersRouter);
 app.use('/api/v1/documents', documentsRouter);
 app.use('/api/v1/questions', questionRouter);
 app.use('/api/v1/auth', authRouter);
-
+app.use('/api/v1/terms', termsRouter); //행정용어
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
