@@ -12,7 +12,7 @@ router.get('/:procedure_id', (req, res) => {
     // SELECT doc_name, issue_place, issue_method, fee, processing_time, online_url
     // FROM documents WHERE procedure_id = ?
 
-    const Documents = {
+    const documentsData = {
         success: true,
         data: [
             {
@@ -39,7 +39,7 @@ router.get('/:procedure_id', (req, res) => {
     };
 
     // 200 OK 상태 코드와 함께 JSON 데이터 응답
-    res.status(200).json(mockDocuments);
+    res.status(200).json(documentsData);
 });
 
 module.exports = router;

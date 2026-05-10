@@ -15,7 +15,10 @@ var questionRouter = require('./routes/questionRouter');
 var authRouter = require('./routes/authRouter');
 var termsRouter = require('./routes/termsRouter'); // 행정용어해설
 
+var cors = require('cors');
 var app = express();
+
+app.use(cors()); //모든 도메인 요청 혀용
 
 const checkDBConnection = async () => {
   let conn;
